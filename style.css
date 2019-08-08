@@ -1,0 +1,409 @@
+ /*样式*/
+		 *{
+		 	margin:0;
+		 	padding: 0;
+		 }	
+		 .contanier{
+		 	width: 1200px;
+		 	margin:0 auto;
+		 }
+		 /*版心相同，声明一个公共类*/
+		 ul{
+		 	list-style: none;/*去掉样式表样式小点*/
+		 }
+		 .clearfix:before,
+		 .clearfix:after{
+		 	content: "";
+		 	display: table;
+		 }
+		 .clearfix:after{
+		 	clear:both;
+		 }
+		 .clearfix{
+		 	zoom:1;
+		 }
+		 body{
+		 	background-color: #f3f5f7;
+		 }
+         a{
+         	color:#050505;
+         	text-decoration:none;
+         }
+      
+		header{
+			height: 100px;
+			
+			overflow:hidden;
+		}
+		nav{
+			width:960px;
+			height: 42px;
+			margin:26px auto;
+		}
+        .logo{
+        	float: left;
+
+        }
+        .navbar{
+        	float: left;
+        	height: 42px;
+        	line-height: 42px;
+        	margin-left: 50px;
+
+        }
+        .navbar li{
+        	float: left;
+        	
+
+        }
+        .navbar li a{
+        	padding:0 8px;/*上下0，左右是8px*/
+        	display: block;/*a是行内块元素，给高需要转换块级元素*/
+        	height: 42px;
+        }
+        .navbar li a:hover{
+        	border-bottom:2px solid #00a4ff;
+        }
+      /* 搜索框部分 */
+.search {
+    width: 410px;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    float: right;
+}
+input{
+	border:0;
+	 box-sizing: border-box; 
+}
+.search input[type=text] { /*属性选择器*/
+    width: 360px;
+    height: 38px;
+    padding-left: 20px;
+   /*css3的属性，防止padding撑大盒子*/
+    float: left; /*文本框属于行内元素，行内元素之间并排显示，中间有空隙，所以添加浮动*/
+}
+.search input[type=submit] {
+    width: 50px;
+    height: 38px;
+    float: left;
+    background: #00a4ff url(images/search_06_03.png) no-repeat center center;
+}
+/*个人中心部分*/
+.personal {
+    float: right;
+    height: 42px;
+    line-height: 42px;      /* 这个行高给父亲， 行高会继承 */
+    margin: 0 15px 0 35px;  /* 上0 右 15  下0 左  35 */
+}
+.personal a img {
+                width: 30px;
+                height: 30px;
+                margin: 0 2px -6px 12px;  
+                border-radius: 50%;
+                vertical-align: text-top;      
+            }
+
+/*banner*/
+.banner{
+	
+	height: 420px;
+	background-color:#1c036c;
+}
+.banner-in{
+	background: url(images/xc_03.png) no-repeat;
+	height: 420px;
+    position: relative;
+
+}
+.slidebar {
+    height: 420px;
+    width: 190px;
+    background-color: rgba(0,0,0,0.3); /* 盒字背景半透明*/
+    float:left;
+}
+.slidebar li a {
+    color:#fff;
+    font-size: 14px;
+    padding: 0 20px; 
+    /*a是行内元素不要给高*/
+    display: block;
+    height：45px;/*从第一行底端量到下一行底端*/
+    line-height: 45px;
+
+}
+.slidebar li a span{
+    float: right;
+    font-family: arial; /*符号一般使用这个字体*/
+}
+.slidebar li a:hover {
+    color: #00a4ff;
+}
+
+.timetable{
+	float: right;
+	width: 230px;
+	height: 300px;
+	background-color: #fff;
+	margin-top: 50px;
+}
+
+.timetable dt{
+     font-size: 16px;
+     color:#fff;
+     height: 50px;
+     
+    line-height: 50px;
+     letter-spacing: 2px;
+     text-align:center;
+     margin-bottom: 5px;
+     font-weight: 700;
+      background-color: #9bceea;
+}
+
+
+.timetable dd{
+     border-bottom:1px solid #ccc;
+     height: 60px;
+     width: 193px;
+     margin: 0 auto;
+     padding-top:12px;
+     box-sizing: border-box;
+}
+
+.timetable dd h4{
+	font-weight: normal;
+	font-size: 16px;
+	color: #4e4e4e;
+}
+
+.timetable dd p{
+    color: #a5a5a5;
+    font-size: 14px;
+}
+.timetable dd:last-child {
+    border: 0; /*消除最后一个底边框*/            
+}
+.timetable dd a {
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 38px;
+    color: #00a4ff;
+    font-weight: 700;
+    transition: all 1s;
+}
+.timetable dd a:hover {
+    background-color: #00a4ff;
+    color: #fff;
+}
+.circle{
+    width: 180px;
+    height: 22px;
+
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -90px;
+   
+}
+.circle li{
+     float: left;
+     width: 12px;
+     height: 12px;
+     background:rgba(255,255,255,0.4);
+     margin:6px 8px;
+     border-radius: 50%;
+ }
+ .circle .current{
+    width:19px;
+    border-radius:3px;
+    background-color: #fff;
+
+ }
+.recommend{
+	height: 60px;
+	line-height: 60px;
+	margin-top: 8px;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+.recommend a{
+	padding: 0 30px;
+	border-right: 1px solid #ccc;
+}
+.recommend a:hover{
+	color:#00a4ff;
+}
+.recommend a:first-child{
+	color: #00a4ff;
+	font-weight: 700;
+}
+.recommend a:last-child{
+	color: #00a4ff;
+	float: right;
+	border: 0;
+	font-weight: 700;
+	font-size: 14px;
+}
+.recom-products {
+    margin-top: 35px;
+
+}
+.recom-hd h4 {
+    float: left;
+    color: #494949;
+}
+.recom-hd a {
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #a5a5a5;
+}
+.recom-hd a:hover {
+    color: #00a4ff;
+}
+.recom-bd ul li,
+.prom-bd-l-bottom ul li {
+    width: 228px;
+    height: 270px;
+    background-color:#fff;
+    overflow: hidden; /*溢出的部分隐藏*/
+    /* box-shadow:水平阴影 垂直阴影 模糊距离 阴影尺寸 阴影颜色  内/外阴影； */
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    float: left;
+    margin-right: 15px;
+    margin-top: 15px;
+    transition: all 0.2s;
+}
+.recom-bd ul li:hover{
+    margin-top: 10px;
+    box-shadow: 0 10px 5px 5px rgba(0 0 0 0.2);
+}
+
+.recom-bd ul li:nth-child(5n) { /*第五个第十个的外边距为0*/
+    margin-right: 0;
+}
+
+.recom-bd ul li h5,
+.recom-bd ul li p,
+.prom-bd-l-bottom ul li h5,
+.prom-bd-l-bottom ul li p {
+    padding: 0 20px 0 24px;
+    margin-top: 12px;
+}
+.recom-bd ul li h5,
+.prom-bd-l-bottom ul li h5 {
+    line-height: 22px;
+    font-weight: normal;
+    font-size: 14px;
+}
+.recom-bd ul li p ,
+.prom-bd-l-bottom ul li p {
+    font-size: 12px;
+    color: #999;
+}
+.recom-bd span,
+.prom-bd-l-bottom ul li p span {
+    color: #ff7c2d;
+}
+/* 精品推荐结束 */
+
+.middle{
+   margin-top: 35px;
+  
+}
+.middle-in h4{
+    margin-right: 352px;
+    color: #494949;
+    float: left;
+}
+.middle-in>a{
+    float: right;
+    margin-top: 10px;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #a5a5a5;
+}
+.middle a:hover{
+    color:#00a4ff;
+}
+
+.middle-in ul li{
+    float: left;
+    font-size: 16px;
+    padding: 0 36px;
+
+}
+.middle-in ul li a{
+    color:#a7a8a9;
+}
+.prom-bd{
+    margin-top: 15px;
+
+}
+.prom-bd-l{
+    width: 228px;
+    height: 390px;
+    float: left;
+    margin-right: 15px;
+    overflow: hidden;
+
+}
+.prom-bd-r{
+    float: right;
+}
+
+.prom-bd-l-bottom ul li:nth-child(4n) {
+    margin-right: 0;
+}
+/*页面底部部分*/
+/* 页面底部分 */
+.footer {
+    height: 270px;
+    background-color: #ffffff;
+    margin-top: 100px;
+   
+}
+.footer-in {
+    padding-top: 30px; /*盒子没有给高度不用担心撑开盒子*/
+}
+.footer-l {
+    float: left;
+}
+.footer-l p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #999;
+    margin-top: 20px;  
+}
+.footer-l a {
+    display: block;
+    width: 118px;
+    height: 33px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 33px;
+    margin-top: 15px;
+}
+.footer-r {
+    float: right;
+    color: #333;
+}
+.footer-r dl {
+    float: left;
+    width: 225px;
+}
+.footer-r dt {
+    font-size: 16px;
+    height: 30px;
+}
+.footer-r dd {
+    font-size: 12px;
+    height: 20px;
+}
+.footer-r dd a:hover {
+    color: #00a4ff;
+    text-decoration: underline; /*  添加下划线 */
+}
